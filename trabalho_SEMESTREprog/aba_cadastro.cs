@@ -34,10 +34,18 @@ namespace trabalho_SEMESTREprog
 
             sqlCommand.ExecuteNonQuery();
 
-            MessageBox.Show("cadastrado com suceso",
+            MessageBox.Show("cadastrado com suceso",//mensagem na tela
                 "AVISO",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+
+            //limpar os campos
+            textBox1.Clear();
+            textBox4.Clear();
+            textBox3.Clear();
+            textBox2.Clear();
+
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
