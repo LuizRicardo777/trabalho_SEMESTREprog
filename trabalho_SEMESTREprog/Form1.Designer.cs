@@ -349,6 +349,7 @@
             this.ocupada3.TabIndex = 29;
             this.ocupada3.Text = "ocupada";
             this.ocupada3.UseVisualStyleBackColor = true;
+            this.ocupada3.Click += new System.EventHandler(this.ocupada3_Click);
             // 
             // desocupada2
             // 
