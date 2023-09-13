@@ -45,6 +45,7 @@ namespace trabalho_SEMESTREprog
             textBox3.Clear();
             textBox2.Clear();
 
+            UpdateListView();
 
         }
 
