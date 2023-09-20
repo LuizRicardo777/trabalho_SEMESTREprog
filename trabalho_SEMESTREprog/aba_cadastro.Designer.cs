@@ -38,6 +38,11 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.confirmar = new System.Windows.Forms.Button();
+            this.editar = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -129,11 +134,51 @@
             this.confirmar.UseVisualStyleBackColor = false;
             this.confirmar.Click += new System.EventHandler(this.confirmar_Click);
             // 
+            // editar
+            // 
+            this.editar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.editar.Location = new System.Drawing.Point(177, 400);
+            this.editar.Name = "editar";
+            this.editar.Size = new System.Drawing.Size(124, 32);
+            this.editar.TabIndex = 44;
+            this.editar.Text = "EDITAR";
+            this.editar.UseVisualStyleBackColor = false;
+            this.editar.Click += new System.EventHandler(this.editar_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(925, 12);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(173, 149);
+            this.listView1.TabIndex = 45;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDoubleClick);
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Placa";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Nome";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Carro";
+            // 
             // aba_cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1173, 604);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.editar);
             this.Controls.Add(this.confirmar);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -146,6 +191,7 @@
             this.Controls.Add(this.label1);
             this.Name = "aba_cadastro";
             this.Text = "aba_cadastro";
+            this.Load += new System.EventHandler(this.aba_cadastro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,5 +209,10 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button confirmar;
+        private System.Windows.Forms.Button editar;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }

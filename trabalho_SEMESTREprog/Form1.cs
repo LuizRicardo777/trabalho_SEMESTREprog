@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace trabalho_SEMESTREprog
 {
@@ -60,16 +61,8 @@ namespace trabalho_SEMESTREprog
         //=================================================================================================================
         //=================================================================================================================
 
-
-        private void desalocada_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
+      
+        
 
         private void cad_carros_Click(object sender, EventArgs e)
         {
@@ -77,20 +70,9 @@ namespace trabalho_SEMESTREprog
             formscadastro.ShowDialog();
         }
 
-        private void ocupada3_Click(object sender, EventArgs e)
-        {
+        
 
-        }
-
-        private void ocupada_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void desocupada2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
         //===========================================================================
         //tela inicial(cabeçalho)================================
         private void Form1_Load(object sender, EventArgs e)
@@ -98,15 +80,15 @@ namespace trabalho_SEMESTREprog
             UpdateListView();
         }
 
-        private void vaga_1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
         //=============================================================================================================================================================
         //=============================================================================================================================================================
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+
+       
+        }
     }
-}
+
