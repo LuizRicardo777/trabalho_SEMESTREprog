@@ -13,8 +13,7 @@ namespace trabalho_SEMESTREprog
 {
     public partial class aba_cadastro : Form
     {
-       
-
+        //private string Id;
 
         public aba_cadastro()
         {
@@ -132,7 +131,7 @@ namespace trabalho_SEMESTREprog
 
             sqlCommand.ExecuteNonQuery();
 
-            MessageBox.Show("cadastrado com suceso",//mensagem na tela
+            MessageBox.Show("editado com suceso",//mensagem na tela
                 "AVISO",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
@@ -159,6 +158,37 @@ namespace trabalho_SEMESTREprog
             textBox1.Text = listView1.Items[index].SubItems[0].Text;
             textBox4.Text = listView1.Items[index].SubItems[1].Text;
             textBox2.Text = listView1.Items[index].SubItems[2].Text;
+            textBox3.Enabled = false;
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            Conexao connection = new Conexao();
+            SqlCommand sqlCommand = new SqlCommand();
+
+            sqlCommand.Connection = connection.ReturnConnection();
+            sqlCommand.CommandText = @"DELETE FROM cadastro WHERE Id = @Id";
+            sqlCommand.Parameters.AddWithValue("@Id", textBox1.Text);
+            try
+            {
+                sqlCommand.ExecuteNonQuery();
+            }
+            catch (Exception err)
+            {
+                throw new Exception("Erro: Problemas ao excluir usuário no banco.\n" + err.Message);
+            }
+            finally
+            {
+                connection.CloseConnection();
+                textBox1.Clear();
+                textBox4.Clear();
+                textBox3.Clear();
+                textBox2.Clear();
+
+
+                UpdateListView();
+            }
+           
         }
     }
 }

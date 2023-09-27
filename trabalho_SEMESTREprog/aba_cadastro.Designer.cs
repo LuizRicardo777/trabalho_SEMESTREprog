@@ -43,6 +43,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -151,6 +152,7 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
+            this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(925, 12);
             this.listView1.Name = "listView1";
@@ -172,11 +174,23 @@
             // 
             this.columnHeader3.Text = "Carro";
             // 
+            // delete
+            // 
+            this.delete.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.delete.Location = new System.Drawing.Point(177, 450);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(124, 33);
+            this.delete.TabIndex = 46;
+            this.delete.Text = "DELETAR";
+            this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
+            // 
             // aba_cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1173, 604);
+            this.Controls.Add(this.delete);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.editar);
             this.Controls.Add(this.confirmar);
@@ -214,5 +228,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Button delete;
     }
 }
