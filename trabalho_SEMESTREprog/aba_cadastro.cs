@@ -163,32 +163,25 @@ namespace trabalho_SEMESTREprog
 
         private void delete_Click(object sender, EventArgs e)
         {
-            Conexao connection = new Conexao();
-            SqlCommand sqlCommand = new SqlCommand();
+           //chamar classe
+           ClienteDAO clienteDAO = new ClienteDAO();
+            clienteDAO.DeleteUser(textBox1.Text);
 
-            sqlCommand.Connection = connection.ReturnConnection();
-            sqlCommand.CommandText = @"DELETE FROM cadastro WHERE Id = @Id";
-            sqlCommand.Parameters.AddWithValue("@Id", textBox1.Text);
-            try
-            {
-                sqlCommand.ExecuteNonQuery();
-            }
-            catch (Exception err)
-            {
-                throw new Exception("Erro: Problemas ao excluir usuário no banco.\n" + err.Message);
-            }
-            finally
-            {
-                connection.CloseConnection();
+
+
+            //limpar
                 textBox1.Clear();
                 textBox4.Clear();
                 textBox3.Clear();
                 textBox2.Clear();
 
-
+            //atualizar
                 UpdateListView();
-            }
-           
+
+            MessageBox.Show("deletado com suceso",//mensagem na tela
+                "AVISO",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
     }
 }

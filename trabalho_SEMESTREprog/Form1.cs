@@ -88,7 +88,10 @@ namespace trabalho_SEMESTREprog
 
         }
 
-       
+        private void tela_vagas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
+    }
     }
 

@@ -55,9 +55,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(827, 578);
+            this.pictureBox1.Location = new System.Drawing.Point(746, 496);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(556, 244);
+            this.pictureBox1.Size = new System.Drawing.Size(637, 326);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
@@ -144,6 +144,7 @@
             this.tela_vagas.Name = "tela_vagas";
             this.tela_vagas.Size = new System.Drawing.Size(306, 21);
             this.tela_vagas.TabIndex = 40;
+            this.tela_vagas.SelectedIndexChanged += new System.EventHandler(this.tela_vagas_SelectedIndexChanged);
             // 
             // comdica0_vaga
             // 
