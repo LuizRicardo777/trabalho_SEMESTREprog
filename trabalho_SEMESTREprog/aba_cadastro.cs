@@ -13,7 +13,7 @@ namespace trabalho_SEMESTREprog
 {
     public partial class aba_cadastro : Form
     {
-        //private string Id;
+        
 
         public aba_cadastro()
         {
@@ -23,30 +23,21 @@ namespace trabalho_SEMESTREprog
         {
             listView1.Items.Clear();
 
-            Conexao conn = new Conexao();
-            SqlCommand sqlCom = new SqlCommand();
+           ClienteDAO clienteDAO = new ClienteDAO();
+            List<Cliente> clientes = ClienteDAO.SelectUser(); 
 
-            sqlCom.Connection = conn.ReturnConnection();
-            sqlCom.CommandText = "SELECT Id,Nome, Carro FROM cadastro";
 
             try
             {
-                SqlDataReader dr = sqlCom.ExecuteReader();
 
-                //Enquanto for possível continuar a leitura das linhas que foram retornadas na consulta, execute.
-                while (dr.Read())
-                {
-                    string id = (string)dr["Id"];
-                    string Nome = (string)dr["Nome"];
-                    string Carro = (string)dr["Carro"];
-
-
-                    ListViewItem lv = new ListViewItem(id);
+                foreach (Cliente cliente in clientes) { 
+      
+                    ListViewItem lv = new ListViewItem(cliente.id.ToString);
                     lv.SubItems.Add(Nome);
                     lv.SubItems.Add(Carro);
                     listView1.Items.Add(lv);
-
-                }
+}
+                
                 dr.Close();
             }
             catch (Exception err)
@@ -62,24 +53,29 @@ namespace trabalho_SEMESTREprog
 
         private void confirmar_Click(object sender, EventArgs e)
         {
-            Conexao connection = new Conexao();
-            SqlCommand sqlCommand = new SqlCommand();
+            try
+            {
+            //criar objeto
+            Cliente cliente = new Cliente(textBox1.Text, textBox4.Text, textBox3.Text, textBox2.Text);
 
-            sqlCommand.Connection = connection.ReturnConnection();
-            sqlCommand.CommandText = @"INSERT INTO cadastro VALUES
-            (@Id, @Cpf, @Carro, @Nome)";
+                //chamar classe
+                ClienteDAO clientDAO = new ClienteDAO();
+                clientDAO.SalvarUser(cliente);
 
-            sqlCommand.Parameters.AddWithValue("@Id", textBox1.Text);
-            sqlCommand.Parameters.AddWithValue("@Nome", textBox4.Text);
-            sqlCommand.Parameters.AddWithValue("@Cpf", textBox3.Text);
-            sqlCommand.Parameters.AddWithValue("@Carro", textBox2.Text);
 
-            sqlCommand.ExecuteNonQuery();
+                MessageBox.Show("cadastrado com suceso",//mensagem na tela
+                    "AVISO",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+            
 
-            MessageBox.Show("cadastrado com suceso",//mensagem na tela
-                "AVISO",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+
+            
 
             //limpar os campos
             textBox1.Clear();
@@ -113,28 +109,26 @@ namespace trabalho_SEMESTREprog
 
         private void editar_Click(object sender, EventArgs e)
         {
-            Conexao connection = new Conexao();
-            SqlCommand sqlCommand = new SqlCommand();
+            try
+            {
+                //criar objeto
+                Cliente cliente = new Cliente(textBox1.Text, textBox4.Text, textBox3.Text, textBox2.Text);
 
-            sqlCommand.Connection = connection.ReturnConnection();
-            sqlCommand.CommandText = @"UPDATE cadastro SET
-                    Id = @Id,
-                  Cpf = @Cpf,
-                  Carro =  @Carro,
-                  Nome = @Nome
-                  WHERE Id = @Id";
+                //chamar classe
+                ClienteDAO clientDAO = new ClienteDAO();
+                clientDAO.AtualizarUser(cliente);
 
-            sqlCommand.Parameters.AddWithValue("@Id", textBox1.Text);
-            sqlCommand.Parameters.AddWithValue("@Nome", textBox4.Text);
-            sqlCommand.Parameters.AddWithValue("@Cpf", textBox3.Text);
-            sqlCommand.Parameters.AddWithValue("@Carro", textBox2.Text);
 
-            sqlCommand.ExecuteNonQuery();
-
-            MessageBox.Show("editado com suceso",//mensagem na tela
-                "AVISO",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+                MessageBox.Show("editado com sucesso com suceso",//mensagem na tela
+                    "AVISO",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
+            
 
             //limpar os campos
             textBox1.Clear();
@@ -182,6 +176,11 @@ namespace trabalho_SEMESTREprog
                 "AVISO",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -14,7 +14,7 @@ namespace trabalho_SEMESTREprog
         private string _carro;
 
         public Cliente(string id, string nome, string cpf, string carro) {
-
+            
             Id = id;
             Nome = nome;
             Cpf = cpf;
@@ -22,27 +22,50 @@ namespace trabalho_SEMESTREprog
         
         }
 
+
         public string Id
         {
-            set { _id = value; }  
+            set {
+                if(string.IsNullOrEmpty(value))
+                    throw new ArgumentException("valor vazio!" +
+                        "por favor preencha");
+
+
+                _id = value; }  
+
             get { return _id; }
         }
 
         public string Nome
         {
-            set { _nome = value; }  
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                    throw new ArgumentException("valor vazio!" +
+                        "por favor preencha");
+
+                _nome = value; }  
             get { return _nome; }
         }
 
         public string Cpf
         {
-            set { _cpf = value; }  
+            set {if (string.IsNullOrEmpty(value))
+                    throw new ArgumentException("valor vazio!" + "por favor preencha");
+
+
+                _cpf = value; }  
             get { return _cpf; }
         } 
 
         public string Carro
         {
-            set { _carro = value; }  
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                    throw new ArgumentException("valor vazio!" + "por favor preencha");
+
+                _carro = value; }  
             get { return _carro; }
         }
 
