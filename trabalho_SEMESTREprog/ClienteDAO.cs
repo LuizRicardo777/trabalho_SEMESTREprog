@@ -103,19 +103,19 @@ namespace trabalho_SEMESTREprog
                 }
                 dr.Close();
 
-                return clientes;
+                
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message);
+               throw new Exception(err.Message);
             }
             finally
             {
                 conn.CloseConnection();
             }
-            return null;
+            return clientes;
         }
     }
 
-    }
-}
+ }
+

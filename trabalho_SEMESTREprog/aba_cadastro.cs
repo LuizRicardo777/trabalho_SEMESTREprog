@@ -24,30 +24,28 @@ namespace trabalho_SEMESTREprog
             listView1.Items.Clear();
 
            ClienteDAO clienteDAO = new ClienteDAO();
-            List<Cliente> clientes = ClienteDAO.SelectUser(); 
+            List<Cliente> clientes = clienteDAO.SelectUser();
 
 
             try
             {
 
-                foreach (Cliente cliente in clientes) { 
-      
-                    ListViewItem lv = new ListViewItem(cliente.id.ToString);
-                    lv.SubItems.Add(Nome);
-                    lv.SubItems.Add(Carro);
+                foreach (Cliente cliente in clientes)
+                {
+
+                    ListViewItem lv = new ListViewItem(cliente.Id.ToString());
+                    lv.SubItems.Add(cliente.Nome);
+                    lv.SubItems.Add(cliente.Carro);
                     listView1.Items.Add(lv);
-}
-                
-                dr.Close();
+                }
+            
+               
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
             }
-            finally
-            {
-                conn.CloseConnection();
-            }
+            
         }
 
 
