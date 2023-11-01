@@ -40,7 +40,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tela_vagas = new System.Windows.Forms.ComboBox();
-            this.comdica0_vaga = new System.Windows.Forms.Button();
+            this.cad_vagas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +81,7 @@
             this.visu_vagas.TabIndex = 36;
             this.visu_vagas.Text = "visualizar vagas";
             this.visu_vagas.UseVisualStyleBackColor = false;
+            this.visu_vagas.Click += new System.EventHandler(this.visu_vagas_Click);
             // 
             // cad_carros
             // 
@@ -100,6 +101,7 @@
             this.cad_funcionario.TabIndex = 38;
             this.cad_funcionario.Text = "USUÁRIO";
             this.cad_funcionario.UseVisualStyleBackColor = true;
+            this.cad_funcionario.Click += new System.EventHandler(this.cad_funcionario_Click);
             // 
             // listView1
             // 
@@ -146,21 +148,22 @@
             this.tela_vagas.TabIndex = 40;
             this.tela_vagas.SelectedIndexChanged += new System.EventHandler(this.tela_vagas_SelectedIndexChanged);
             // 
-            // comdica0_vaga
+            // cad_vagas
             // 
-            this.comdica0_vaga.Location = new System.Drawing.Point(577, 230);
-            this.comdica0_vaga.Name = "comdica0_vaga";
-            this.comdica0_vaga.Size = new System.Drawing.Size(306, 52);
-            this.comdica0_vaga.TabIndex = 41;
-            this.comdica0_vaga.Text = "ocupar";
-            this.comdica0_vaga.UseVisualStyleBackColor = true;
+            this.cad_vagas.Location = new System.Drawing.Point(1195, 47);
+            this.cad_vagas.Name = "cad_vagas";
+            this.cad_vagas.Size = new System.Drawing.Size(141, 45);
+            this.cad_vagas.TabIndex = 42;
+            this.cad_vagas.Text = "CADASTRO DE VAGAS";
+            this.cad_vagas.UseVisualStyleBackColor = true;
+            this.cad_vagas.Click += new System.EventHandler(this.cad_vagas_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1383, 834);
-            this.Controls.Add(this.comdica0_vaga);
+            this.Controls.Add(this.cad_vagas);
             this.Controls.Add(this.tela_vagas);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.cad_funcionario);
@@ -191,7 +194,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ComboBox tela_vagas;
-        private System.Windows.Forms.Button comdica0_vaga;
+        private System.Windows.Forms.Button cad_vagas;
     }
 }
 

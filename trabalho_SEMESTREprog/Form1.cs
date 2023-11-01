@@ -92,6 +92,24 @@ namespace trabalho_SEMESTREprog
         {
 
         }
+
+        private void cad_funcionario_Click(object sender, EventArgs e)
+        {
+            aba_usuario formscadastro = new aba_usuario();
+            formscadastro.ShowDialog();
+        }
+
+        private void visu_vagas_Click(object sender, EventArgs e)
+        {
+            visu_vagas formscadastro = new visu_vagas();
+            formscadastro.ShowDialog();
+        }
+
+        private void cad_vagas_Click(object sender, EventArgs e)
+        {
+            Cad_vagas formscadastro = new Cad_vagas();
+            formscadastro.ShowDialog();
+        }
     }
     }
 

@@ -52,6 +52,18 @@
     <Compile Include="aba_cadastro.Designer.cs">
       <DependentUpon>aba_cadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="aba_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aba_usuario.Designer.cs">
+      <DependentUpon>aba_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cad_vagas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cad_vagas.Designer.cs">
+      <DependentUpon>Cad_vagas.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClienteDAO.cs" />
     <Compile Include="Conexao.cs" />
     <Compile Include="Form1.cs">
@@ -69,8 +81,17 @@
     <Compile Include="Usuario.Designer.cs">
       <DependentUpon>Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="visu_vagas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="visu_vagas.Designer.cs">
+      <DependentUpon>visu_vagas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="aba_cadastro.resx">
       <DependentUpon>aba_cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="aba_usuario.resx">
+      <DependentUpon>aba_usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -86,6 +107,9 @@
     </Compile>
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="visu_vagas.resx">
+      <DependentUpon>visu_vagas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

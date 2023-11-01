@@ -80,7 +80,7 @@ namespace trabalho_SEMESTREprog
             SqlCommand sqlCom = new SqlCommand();
 
             sqlCom.Connection = conn.ReturnConnection();
-            sqlCom.CommandText = "SELECT Id,Nome, Carro FROM cadastro";
+            sqlCom.CommandText = "SELECT Id,Nome, Carro, Cpf FROM cadastro";
 
             List<Cliente> clientes = new List<Cliente>();
             try
