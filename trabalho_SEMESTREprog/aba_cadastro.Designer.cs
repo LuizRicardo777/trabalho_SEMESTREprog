@@ -44,6 +44,7 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.delete = new System.Windows.Forms.Button();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // label1
@@ -151,12 +152,13 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
-            this.columnHeader3});
+            this.columnHeader3,
+            this.columnHeader4});
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(925, 12);
+            this.listView1.Location = new System.Drawing.Point(890, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(173, 149);
+            this.listView1.Size = new System.Drawing.Size(247, 149);
             this.listView1.TabIndex = 45;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -185,6 +187,10 @@
             this.delete.Text = "DELETAR";
             this.delete.UseVisualStyleBackColor = false;
             this.delete.Click += new System.EventHandler(this.delete_Click);
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "CPF";
             // 
             // aba_cadastro
             // 
@@ -230,5 +236,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
     }
 }

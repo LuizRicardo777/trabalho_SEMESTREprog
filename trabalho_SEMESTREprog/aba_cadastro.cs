@@ -36,6 +36,7 @@ namespace trabalho_SEMESTREprog
                     ListViewItem lv = new ListViewItem(cliente.Id.ToString());
                     lv.SubItems.Add(cliente.Nome);
                     lv.SubItems.Add(cliente.Carro);
+                    lv.SubItems.Add(cliente.Cpf);
                     listView1.Items.Add(lv);
                 }
             
@@ -150,6 +151,7 @@ namespace trabalho_SEMESTREprog
             textBox1.Text = listView1.Items[index].SubItems[0].Text;
             textBox4.Text = listView1.Items[index].SubItems[1].Text;
             textBox2.Text = listView1.Items[index].SubItems[2].Text;
+            textBox3.Text = listView1.Items[index].SubItems[3].Text;
             textBox3.Enabled = false;
         }
 

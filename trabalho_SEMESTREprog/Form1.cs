@@ -39,7 +39,7 @@ namespace trabalho_SEMESTREprog
                     string id = (string)dr["Id"];
                     string Nome = (string)dr["Nome"];
                     string Carro = (string)dr["Carro"];
-                   
+
 
                     ListViewItem lv = new ListViewItem(id);
                     lv.SubItems.Add(Nome);
@@ -61,8 +61,8 @@ namespace trabalho_SEMESTREprog
         //=================================================================================================================
         //=================================================================================================================
 
-      
-        
+
+
 
         private void cad_carros_Click(object sender, EventArgs e)
         {
@@ -70,9 +70,9 @@ namespace trabalho_SEMESTREprog
             formscadastro.ShowDialog();
         }
 
-        
 
-        
+
+
         //===========================================================================
         //tela inicial(cabeçalho)================================
         private void Form1_Load(object sender, EventArgs e)
@@ -80,7 +80,7 @@ namespace trabalho_SEMESTREprog
             UpdateListView();
         }
 
-       
+
         //=============================================================================================================================================================
         //=============================================================================================================================================================
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace trabalho_SEMESTREprog
 
         private void cad_funcionario_Click(object sender, EventArgs e)
         {
-            aba_usuario formscadastro = new aba_usuario();
+            aba_usuario formscadastro = new aba_usuario(1);
             formscadastro.ShowDialog();
         }
 
@@ -105,11 +105,27 @@ namespace trabalho_SEMESTREprog
             formscadastro.ShowDialog();
         }
 
-        private void cad_vagas_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+       
+        //===============================================
+        private void OCUP1_CheckedChanged(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void CAD_VAGAS_Click_1(object sender, EventArgs e)
         {
             Cad_vagas formscadastro = new Cad_vagas();
             formscadastro.ShowDialog();
         }
     }
-    }
+}
 

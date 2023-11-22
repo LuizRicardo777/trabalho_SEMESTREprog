@@ -16,7 +16,7 @@ namespace trabalho_SEMESTREprog
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new aba_usuario(0));
         }
     }
 }
