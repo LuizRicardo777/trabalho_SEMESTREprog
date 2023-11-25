@@ -48,7 +48,7 @@ namespace trabalho_SEMESTREprog
                   WHERE Id = @Id";
 
             sqlCommand.Parameters.AddWithValue("@Id", cliente.Id);
-            sqlCommand.Parameters.AddWithValue("@Nome", cliente.Id);
+            sqlCommand.Parameters.AddWithValue("@Nome", cliente.Nome);
             sqlCommand.Parameters.AddWithValue("@Cpf", cliente.Cpf);
             sqlCommand.Parameters.AddWithValue("@Carro", cliente.Carro);
 

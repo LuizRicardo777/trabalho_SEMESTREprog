@@ -23,39 +23,28 @@ namespace trabalho_SEMESTREprog
         {
             listView1.Items.Clear();
 
-            Conexao conn = new Conexao();
-            SqlCommand sqlCom = new SqlCommand();
+            ClienteDAO clienteDAO = new ClienteDAO();
+            List<Cliente> clientes = clienteDAO.SelectUser();
 
-            sqlCom.Connection = conn.ReturnConnection();
-            sqlCom.CommandText = "SELECT Id,Nome, Carro FROM cadastro";
 
             try
             {
-                SqlDataReader dr = sqlCom.ExecuteReader();
 
-                //Enquanto for possível continuar a leitura das linhas que foram retornadas na consulta, execute.
-                while (dr.Read())
+                foreach (Cliente cliente in clientes)
                 {
-                    string id = (string)dr["Id"];
-                    string Nome = (string)dr["Nome"];
-                    string Carro = (string)dr["Carro"];
 
-
-                    ListViewItem lv = new ListViewItem(id);
-                    lv.SubItems.Add(Nome);
-                    lv.SubItems.Add(Carro);
+                    ListViewItem lv = new ListViewItem(cliente.Id.ToString());
+                    lv.SubItems.Add(cliente.Nome);
+                    lv.SubItems.Add(cliente.Carro);
+                    lv.SubItems.Add(cliente.Cpf);
                     listView1.Items.Add(lv);
-
                 }
-                dr.Close();
+
+
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
-            }
-            finally
-            {
-                conn.CloseConnection();
             }
         }
         //=================================================================================================================

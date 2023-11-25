@@ -77,6 +77,8 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="UsuarioDAO.cs" />
+    <Compile Include="VagasDAO.cs" />
+    <Compile Include="Vagas.cs" />
     <Compile Include="visu_vagas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +90,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="aba_usuario.resx">
       <DependentUpon>aba_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cad_vagas.resx">
+      <DependentUpon>Cad_vagas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

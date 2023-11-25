@@ -43,94 +43,104 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.delete = new System.Windows.Forms.Button();
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(69, 35);
+            this.label1.Location = new System.Drawing.Point(92, 43);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 31);
+            this.label1.Size = new System.Drawing.Size(194, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "cadastre-se";
             // 
             // nome_usu
             // 
             this.nome_usu.AutoSize = true;
-            this.nome_usu.Location = new System.Drawing.Point(75, 166);
+            this.nome_usu.Location = new System.Drawing.Point(100, 204);
+            this.nome_usu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nome_usu.Name = "nome_usu";
-            this.nome_usu.Size = new System.Drawing.Size(39, 13);
+            this.nome_usu.Size = new System.Drawing.Size(47, 16);
             this.nome_usu.TabIndex = 1;
             this.nome_usu.Text = "NOME";
             // 
             // lplaca
             // 
             this.lplaca.AutoSize = true;
-            this.lplaca.Location = new System.Drawing.Point(75, 105);
+            this.lplaca.Location = new System.Drawing.Point(100, 129);
+            this.lplaca.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lplaca.Name = "lplaca";
-            this.lplaca.Size = new System.Drawing.Size(41, 13);
+            this.lplaca.Size = new System.Drawing.Size(50, 16);
             this.lplaca.TabIndex = 2;
             this.lplaca.Text = "PLACA";
             // 
             // cpf
             // 
             this.cpf.AutoSize = true;
-            this.cpf.Location = new System.Drawing.Point(75, 217);
+            this.cpf.Location = new System.Drawing.Point(100, 267);
+            this.cpf.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.cpf.Name = "cpf";
-            this.cpf.Size = new System.Drawing.Size(27, 13);
+            this.cpf.Size = new System.Drawing.Size(33, 16);
             this.cpf.TabIndex = 3;
             this.cpf.Text = "CPF";
             // 
             // modelo_carro
             // 
             this.modelo_carro.AutoSize = true;
-            this.modelo_carro.Location = new System.Drawing.Point(75, 269);
+            this.modelo_carro.Location = new System.Drawing.Point(100, 331);
+            this.modelo_carro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.modelo_carro.Name = "modelo_carro";
-            this.modelo_carro.Size = new System.Drawing.Size(45, 13);
+            this.modelo_carro.Size = new System.Drawing.Size(55, 16);
             this.modelo_carro.TabIndex = 4;
             this.modelo_carro.Text = "CARRO";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(75, 132);
+            this.textBox1.Location = new System.Drawing.Point(100, 162);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 5;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(75, 300);
+            this.textBox2.Location = new System.Drawing.Point(100, 369);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 6;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(75, 246);
+            this.textBox3.Location = new System.Drawing.Point(100, 303);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(132, 22);
             this.textBox3.TabIndex = 7;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(78, 194);
+            this.textBox4.Location = new System.Drawing.Point(104, 239);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.Size = new System.Drawing.Size(132, 22);
             this.textBox4.TabIndex = 8;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // confirmar
             // 
             this.confirmar.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.confirmar.Location = new System.Drawing.Point(177, 350);
+            this.confirmar.Location = new System.Drawing.Point(236, 431);
+            this.confirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.confirmar.Name = "confirmar";
-            this.confirmar.Size = new System.Drawing.Size(124, 33);
+            this.confirmar.Size = new System.Drawing.Size(165, 41);
             this.confirmar.TabIndex = 9;
             this.confirmar.Text = "SALVAR";
             this.confirmar.UseVisualStyleBackColor = false;
@@ -139,9 +149,10 @@
             // editar
             // 
             this.editar.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.editar.Location = new System.Drawing.Point(177, 400);
+            this.editar.Location = new System.Drawing.Point(236, 492);
+            this.editar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.editar.Name = "editar";
-            this.editar.Size = new System.Drawing.Size(124, 32);
+            this.editar.Size = new System.Drawing.Size(165, 39);
             this.editar.TabIndex = 44;
             this.editar.Text = "EDITAR";
             this.editar.UseVisualStyleBackColor = false;
@@ -156,9 +167,10 @@
             this.columnHeader4});
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(890, 12);
+            this.listView1.Location = new System.Drawing.Point(887, 38);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(247, 149);
+            this.listView1.Size = new System.Drawing.Size(328, 182);
             this.listView1.TabIndex = 45;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -177,26 +189,27 @@
             // 
             this.columnHeader3.Text = "Carro";
             // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "CPF";
+            // 
             // delete
             // 
             this.delete.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.delete.Location = new System.Drawing.Point(177, 450);
+            this.delete.Location = new System.Drawing.Point(236, 554);
+            this.delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(124, 33);
+            this.delete.Size = new System.Drawing.Size(165, 41);
             this.delete.TabIndex = 46;
             this.delete.Text = "DELETAR";
             this.delete.UseVisualStyleBackColor = false;
             this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "CPF";
-            // 
             // aba_cadastro
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1173, 604);
+            this.ClientSize = new System.Drawing.Size(1564, 743);
             this.Controls.Add(this.delete);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.editar);
@@ -210,6 +223,7 @@
             this.Controls.Add(this.lplaca);
             this.Controls.Add(this.nome_usu);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "aba_cadastro";
             this.Text = "aba_cadastro";
             this.Load += new System.EventHandler(this.aba_cadastro_Load);
