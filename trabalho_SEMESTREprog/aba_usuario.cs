@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace trabalho_SEMESTREprog
 {
@@ -49,11 +51,16 @@ namespace trabalho_SEMESTREprog
                     Usuario usuario = new Usuario(tbt_nome.Text, tbt_senha.Text);
 
                     //chamar classe
+                     MessageBox.Show("SISTEMA EM FUNCIONAMENTO!",//mensagem na tela
+                    "BEM VINDO",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                     UsuarioDAO usuariDAO = new UsuarioDAO();
                     if (usuariDAO.LoginUser(usuario))
                     {
                         Form1 form = new Form1();
                         form.ShowDialog();
+                        
                     }
                     else
                     {

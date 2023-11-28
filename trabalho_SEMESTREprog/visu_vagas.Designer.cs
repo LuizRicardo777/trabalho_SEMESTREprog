@@ -28,120 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.VAGA2 = new System.Windows.Forms.Label();
-            this.OCUPADA1 = new System.Windows.Forms.CheckBox();
-            this.DESOCUPADA1 = new System.Windows.Forms.CheckBox();
-            this.DESOCUPADA3 = new System.Windows.Forms.CheckBox();
-            this.OCUPADA3 = new System.Windows.Forms.CheckBox();
-            this.DESOCUPADA2 = new System.Windows.Forms.CheckBox();
-            this.OCUPADA2 = new System.Windows.Forms.CheckBox();
-            this.VAGA3 = new System.Windows.Forms.Label();
-            this.VAGA1 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.Vaga = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Placa = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // VAGA2
+            // label1
             // 
-            this.VAGA2.AutoSize = true;
-            this.VAGA2.Location = new System.Drawing.Point(54, 153);
-            this.VAGA2.Name = "VAGA2";
-            this.VAGA2.Size = new System.Drawing.Size(45, 13);
-            this.VAGA2.TabIndex = 0;
-            this.VAGA2.Text = "VAGA 2";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 28.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(234, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(573, 59);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "VISUALIZAÇÃO DE VAGAS";
             // 
-            // OCUPADA1
+            // listView1
             // 
-            this.OCUPADA1.AutoSize = true;
-            this.OCUPADA1.Location = new System.Drawing.Point(57, 88);
-            this.OCUPADA1.Name = "OCUPADA1";
-            this.OCUPADA1.Size = new System.Drawing.Size(78, 17);
-            this.OCUPADA1.TabIndex = 1;
-            this.OCUPADA1.Text = "OCUPADA";
-            this.OCUPADA1.UseVisualStyleBackColor = true;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Vaga,
+            this.Placa,
+            this.Status});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(244, 132);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(563, 390);
+            this.listView1.TabIndex = 1;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // DESOCUPADA1
+            // Vaga
             // 
-            this.DESOCUPADA1.AutoSize = true;
-            this.DESOCUPADA1.Location = new System.Drawing.Point(143, 88);
-            this.DESOCUPADA1.Name = "DESOCUPADA1";
-            this.DESOCUPADA1.Size = new System.Drawing.Size(100, 17);
-            this.DESOCUPADA1.TabIndex = 2;
-            this.DESOCUPADA1.Text = "DESOCUPADA";
-            this.DESOCUPADA1.UseVisualStyleBackColor = true;
+            this.Vaga.Text = "Vaga";
+            this.Vaga.Width = 120;
             // 
-            // DESOCUPADA3
+            // Placa
             // 
-            this.DESOCUPADA3.AutoSize = true;
-            this.DESOCUPADA3.Location = new System.Drawing.Point(143, 320);
-            this.DESOCUPADA3.Name = "DESOCUPADA3";
-            this.DESOCUPADA3.Size = new System.Drawing.Size(100, 17);
-            this.DESOCUPADA3.TabIndex = 3;
-            this.DESOCUPADA3.Text = "DESOCUPADA";
-            this.DESOCUPADA3.UseVisualStyleBackColor = true;
+            this.Placa.Text = "Placa";
+            this.Placa.Width = 120;
             // 
-            // OCUPADA3
+            // Status
             // 
-            this.OCUPADA3.AutoSize = true;
-            this.OCUPADA3.Location = new System.Drawing.Point(57, 320);
-            this.OCUPADA3.Name = "OCUPADA3";
-            this.OCUPADA3.Size = new System.Drawing.Size(78, 17);
-            this.OCUPADA3.TabIndex = 4;
-            this.OCUPADA3.Text = "OCUPADA";
-            this.OCUPADA3.UseVisualStyleBackColor = true;
-            // 
-            // DESOCUPADA2
-            // 
-            this.DESOCUPADA2.AutoSize = true;
-            this.DESOCUPADA2.Location = new System.Drawing.Point(143, 217);
-            this.DESOCUPADA2.Name = "DESOCUPADA2";
-            this.DESOCUPADA2.Size = new System.Drawing.Size(100, 17);
-            this.DESOCUPADA2.TabIndex = 5;
-            this.DESOCUPADA2.Text = "DESOCUPADA";
-            this.DESOCUPADA2.UseVisualStyleBackColor = true;
-            // 
-            // OCUPADA2
-            // 
-            this.OCUPADA2.AutoSize = true;
-            this.OCUPADA2.Location = new System.Drawing.Point(57, 217);
-            this.OCUPADA2.Name = "OCUPADA2";
-            this.OCUPADA2.Size = new System.Drawing.Size(78, 17);
-            this.OCUPADA2.TabIndex = 6;
-            this.OCUPADA2.Text = "OCUPADA";
-            this.OCUPADA2.UseVisualStyleBackColor = true;
-            // 
-            // VAGA3
-            // 
-            this.VAGA3.AutoSize = true;
-            this.VAGA3.Location = new System.Drawing.Point(54, 266);
-            this.VAGA3.Name = "VAGA3";
-            this.VAGA3.Size = new System.Drawing.Size(45, 13);
-            this.VAGA3.TabIndex = 7;
-            this.VAGA3.Text = "VAGA 3";
-            // 
-            // VAGA1
-            // 
-            this.VAGA1.AutoSize = true;
-            this.VAGA1.Location = new System.Drawing.Point(54, 39);
-            this.VAGA1.Name = "VAGA1";
-            this.VAGA1.Size = new System.Drawing.Size(45, 13);
-            this.VAGA1.TabIndex = 8;
-            this.VAGA1.Text = "VAGA 1";
+            this.Status.Text = "Status";
+            this.Status.Width = 120;
             // 
             // visu_vagas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.VAGA1);
-            this.Controls.Add(this.VAGA3);
-            this.Controls.Add(this.OCUPADA2);
-            this.Controls.Add(this.DESOCUPADA2);
-            this.Controls.Add(this.OCUPADA3);
-            this.Controls.Add(this.DESOCUPADA3);
-            this.Controls.Add(this.DESOCUPADA1);
-            this.Controls.Add(this.OCUPADA1);
-            this.Controls.Add(this.VAGA2);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "visu_vagas";
             this.Text = "visu_vagas";
+            this.Load += new System.EventHandler(this.visu_vagas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,14 +93,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label VAGA2;
-        private System.Windows.Forms.CheckBox OCUPADA1;
-        private System.Windows.Forms.CheckBox DESOCUPADA1;
-        private System.Windows.Forms.CheckBox DESOCUPADA3;
-        private System.Windows.Forms.CheckBox OCUPADA3;
-        private System.Windows.Forms.CheckBox DESOCUPADA2;
-        private System.Windows.Forms.CheckBox OCUPADA2;
-        private System.Windows.Forms.Label VAGA3;
-        private System.Windows.Forms.Label VAGA1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader Vaga;
+        private System.Windows.Forms.ColumnHeader Placa;
+        private System.Windows.Forms.ColumnHeader Status;
     }
 }

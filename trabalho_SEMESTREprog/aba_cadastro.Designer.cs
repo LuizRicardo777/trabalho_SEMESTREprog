@@ -45,6 +45,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.delete = new System.Windows.Forms.Button();
+            this.RELATORIO = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -101,7 +102,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(100, 162);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 5;
@@ -110,7 +111,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(100, 369);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 6;
@@ -119,7 +120,7 @@
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(100, 303);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(132, 22);
             this.textBox3.TabIndex = 7;
@@ -128,7 +129,7 @@
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(104, 239);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(132, 22);
             this.textBox4.TabIndex = 8;
@@ -138,7 +139,7 @@
             // 
             this.confirmar.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.confirmar.Location = new System.Drawing.Point(236, 431);
-            this.confirmar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.confirmar.Margin = new System.Windows.Forms.Padding(4);
             this.confirmar.Name = "confirmar";
             this.confirmar.Size = new System.Drawing.Size(165, 41);
             this.confirmar.TabIndex = 9;
@@ -150,7 +151,7 @@
             // 
             this.editar.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.editar.Location = new System.Drawing.Point(236, 492);
-            this.editar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.editar.Margin = new System.Windows.Forms.Padding(4);
             this.editar.Name = "editar";
             this.editar.Size = new System.Drawing.Size(165, 39);
             this.editar.TabIndex = 44;
@@ -168,7 +169,7 @@
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(887, 38);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(328, 182);
             this.listView1.TabIndex = 45;
@@ -197,7 +198,7 @@
             // 
             this.delete.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.delete.Location = new System.Drawing.Point(236, 554);
-            this.delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.delete.Margin = new System.Windows.Forms.Padding(4);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(165, 41);
             this.delete.TabIndex = 46;
@@ -205,11 +206,22 @@
             this.delete.UseVisualStyleBackColor = false;
             this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
+            // RELATORIO
+            // 
+            this.RELATORIO.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.RELATORIO.Location = new System.Drawing.Point(887, 536);
+            this.RELATORIO.Name = "RELATORIO";
+            this.RELATORIO.Size = new System.Drawing.Size(328, 59);
+            this.RELATORIO.TabIndex = 47;
+            this.RELATORIO.Text = "GERAR RELATÓRIO";
+            this.RELATORIO.UseVisualStyleBackColor = false;
+            // 
             // aba_cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1564, 743);
+            this.Controls.Add(this.RELATORIO);
             this.Controls.Add(this.delete);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.editar);
@@ -223,7 +235,7 @@
             this.Controls.Add(this.lplaca);
             this.Controls.Add(this.nome_usu);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "aba_cadastro";
             this.Text = "aba_cadastro";
             this.Load += new System.EventHandler(this.aba_cadastro_Load);
@@ -251,5 +263,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.Button RELATORIO;
     }
 }
