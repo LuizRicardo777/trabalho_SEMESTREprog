@@ -42,11 +42,12 @@ namespace trabalho_SEMESTREprog
                     ListViewItem lv = new ListViewItem(vagas.Vaga.ToString());
                     lv.SubItems.Add(vagas.Placa);
                     lv.SubItems.Add(vagas.Status);
+                    if (vagas.Status.ToLower() == "ocupado") 
+                        lv.BackColor = Color.Red;
+                    else 
+                        lv.BackColor = Color.Green;
                     listView1.Items.Add(lv);
-                   // lv.BackColor = vagas.Status.ToLower() == "ocupado" ? Color.LightCoral : SystemColors.Window;
-
-                  //  listView1.Items.Add(lv);
-                
+                   
             }
 
 

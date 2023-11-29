@@ -48,7 +48,7 @@ namespace trabalho_SEMESTREprog
                 if (tipo == 0)
                 {
                     //criar objeto
-                    Usuario usuario = new Usuario(tbt_nome.Text, tbt_senha.Text);
+                    Usuario usuario = new Usuario(tbt_nome.Text,tbt_senha.Text);
 
                     //chamar classe
                      MessageBox.Show("SISTEMA EM FUNCIONAMENTO!",//mensagem na tela
@@ -74,7 +74,7 @@ namespace trabalho_SEMESTREprog
                 else
                 {
                     //criar objeto
-                    Usuario usuario = new Usuario(tbt_nome.Text, tbt_senha.Text);
+                    Usuario usuario = new Usuario(tbt_nome.Text, Senha.CalculateMD5Hash (tbt_senha.Text));
 
                     //chamar classe
                     UsuarioDAO usuariDAO = new UsuarioDAO();

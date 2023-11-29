@@ -35,7 +35,6 @@
             this.modelo_carro = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.confirmar = new System.Windows.Forms.Button();
             this.editar = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.delete = new System.Windows.Forms.Button();
             this.RELATORIO = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -116,15 +116,6 @@
             this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 6;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(100, 303);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 22);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
@@ -216,18 +207,26 @@
             this.RELATORIO.Text = "GERAR RELATÓRIO";
             this.RELATORIO.UseVisualStyleBackColor = false;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(99, 296);
+            this.textBox3.Mask = "000,000,000-00";
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(133, 22);
+            this.textBox3.TabIndex = 48;
+            // 
             // aba_cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1564, 743);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.RELATORIO);
             this.Controls.Add(this.delete);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.editar);
             this.Controls.Add(this.confirmar);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.modelo_carro);
@@ -253,7 +252,6 @@
         private System.Windows.Forms.Label modelo_carro;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button confirmar;
         private System.Windows.Forms.Button editar;
@@ -264,5 +262,6 @@
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Button RELATORIO;
+        private System.Windows.Forms.MaskedTextBox textBox3;
     }
 }

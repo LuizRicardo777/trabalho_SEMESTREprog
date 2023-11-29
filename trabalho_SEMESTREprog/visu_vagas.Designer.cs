@@ -63,7 +63,6 @@
             // Vaga
             // 
             this.Vaga.Text = "Vaga";
-            this.Vaga.Width = 120;
             // 
             // Placa
             // 
@@ -82,7 +81,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "visu_vagas";
             this.Text = "visu_vagas";
             this.Load += new System.EventHandler(this.visu_vagas_Load);

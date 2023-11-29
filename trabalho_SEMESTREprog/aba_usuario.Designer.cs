@@ -39,18 +39,20 @@
             // NOME2
             // 
             this.NOME2.AutoSize = true;
-            this.NOME2.Location = new System.Drawing.Point(79, 57);
+            this.NOME2.Location = new System.Drawing.Point(105, 70);
+            this.NOME2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.NOME2.Name = "NOME2";
-            this.NOME2.Size = new System.Drawing.Size(39, 13);
+            this.NOME2.Size = new System.Drawing.Size(47, 16);
             this.NOME2.TabIndex = 1;
             this.NOME2.Text = "NOME";
             // 
             // HORÁRIO
             // 
             this.HORÁRIO.AutoSize = true;
-            this.HORÁRIO.Location = new System.Drawing.Point(76, 232);
+            this.HORÁRIO.Location = new System.Drawing.Point(101, 286);
+            this.HORÁRIO.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HORÁRIO.Name = "HORÁRIO";
-            this.HORÁRIO.Size = new System.Drawing.Size(10, 13);
+            this.HORÁRIO.Size = new System.Drawing.Size(10, 16);
             this.HORÁRIO.TabIndex = 2;
             this.HORÁRIO.Text = " ";
             this.HORÁRIO.Click += new System.EventHandler(this.label3_Click);
@@ -58,9 +60,10 @@
             // SALVAR2
             // 
             this.SALVAR2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.SALVAR2.Location = new System.Drawing.Point(183, 285);
+            this.SALVAR2.Location = new System.Drawing.Point(244, 351);
+            this.SALVAR2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SALVAR2.Name = "SALVAR2";
-            this.SALVAR2.Size = new System.Drawing.Size(155, 42);
+            this.SALVAR2.Size = new System.Drawing.Size(207, 52);
             this.SALVAR2.TabIndex = 3;
             this.SALVAR2.Text = "SALVAR";
             this.SALVAR2.UseVisualStyleBackColor = false;
@@ -68,38 +71,43 @@
             // 
             // tbt_nome
             // 
-            this.tbt_nome.Location = new System.Drawing.Point(82, 86);
+            this.tbt_nome.Location = new System.Drawing.Point(109, 106);
+            this.tbt_nome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbt_nome.Name = "tbt_nome";
-            this.tbt_nome.Size = new System.Drawing.Size(229, 20);
+            this.tbt_nome.Size = new System.Drawing.Size(304, 22);
             this.tbt_nome.TabIndex = 7;
             // 
             // tbt_senha
             // 
-            this.tbt_senha.Location = new System.Drawing.Point(79, 186);
+            this.tbt_senha.Location = new System.Drawing.Point(105, 229);
+            this.tbt_senha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbt_senha.Name = "tbt_senha";
-            this.tbt_senha.Size = new System.Drawing.Size(232, 20);
+            this.tbt_senha.PasswordChar = '*';
+            this.tbt_senha.Size = new System.Drawing.Size(308, 22);
             this.tbt_senha.TabIndex = 8;
             // 
             // SENHA
             // 
             this.SENHA.AutoSize = true;
-            this.SENHA.Location = new System.Drawing.Point(82, 142);
+            this.SENHA.Location = new System.Drawing.Point(109, 175);
+            this.SENHA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SENHA.Name = "SENHA";
-            this.SENHA.Size = new System.Drawing.Size(44, 13);
+            this.SENHA.Size = new System.Drawing.Size(54, 16);
             this.SENHA.TabIndex = 9;
             this.SENHA.Text = "SENHA";
             // 
             // aba_usuario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.SENHA);
             this.Controls.Add(this.tbt_senha);
             this.Controls.Add(this.tbt_nome);
             this.Controls.Add(this.SALVAR2);
             this.Controls.Add(this.HORÁRIO);
             this.Controls.Add(this.NOME2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "aba_usuario";
             this.Text = "aba_usuario";
             this.Load += new System.EventHandler(this.aba_usuario_Load);

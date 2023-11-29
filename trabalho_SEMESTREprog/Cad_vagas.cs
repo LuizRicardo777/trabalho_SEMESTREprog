@@ -28,7 +28,7 @@ namespace trabalho_SEMESTREprog
             try
             {
                 //criar objeto
-                Vagas vagas = new Vagas(tbt_vaga.Text, tbt_placa.Text, tbt_status.Text);
+                Vagas vagas = new Vagas(tbt_vaga.Text, tbt_placa.Text, cmb_status.Text);
 
                 //chamar classe
                 VagasDAO vagaDAO = new VagasDAO();
@@ -47,7 +47,7 @@ namespace trabalho_SEMESTREprog
             //limpar os campos
             tbt_vaga.Clear();
             tbt_placa.Clear();
-            tbt_status.Clear();
+            cmb_status.SelectedIndex = 0;
            
 
             UpdateListView();
@@ -101,7 +101,7 @@ namespace trabalho_SEMESTREprog
 
             tbt_vaga.Text = lv_vagas.Items[index].SubItems[0].Text;
             tbt_placa.Text = lv_vagas.Items[index].SubItems[1].Text;
-            tbt_status.Text = lv_vagas.Items[index].SubItems[2].Text;
+            cmb_status.Text = lv_vagas.Items[index].SubItems[2].Text;
             
         }
 
@@ -110,7 +110,7 @@ namespace trabalho_SEMESTREprog
             try
             {
                 //criar objeto
-                Vagas vagas  = new Vagas(tbt_vaga.Text, tbt_placa.Text, tbt_status.Text);
+                Vagas vagas  = new Vagas(tbt_vaga.Text, tbt_placa.Text, cmb_status.Text);
 
                 //chamar classe
                 VagasDAO vagaDAO = new VagasDAO();
@@ -131,7 +131,7 @@ namespace trabalho_SEMESTREprog
             //limpar os campos
             tbt_vaga.Clear();
             tbt_placa.Clear();
-            tbt_status.Clear();
+            cmb_status.SelectedIndex = 0;
             
 
             UpdateListView();
@@ -148,7 +148,7 @@ namespace trabalho_SEMESTREprog
             //limpar
             tbt_vaga.Clear();
             tbt_placa.Clear();
-            tbt_status.Clear();
+            cmb_status.SelectedIndex = 0;
 
             //atualizar
             UpdateListView();

@@ -32,7 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tbt_vaga = new System.Windows.Forms.TextBox();
-            this.tbt_status = new System.Windows.Forms.TextBox();
             this.tbt_placa = new System.Windows.Forms.TextBox();
             this.SALVAR3 = new System.Windows.Forms.Button();
             this.EDITAR3 = new System.Windows.Forms.Button();
@@ -41,6 +40,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cmb_status = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -80,13 +80,6 @@
             this.tbt_vaga.Name = "tbt_vaga";
             this.tbt_vaga.Size = new System.Drawing.Size(170, 22);
             this.tbt_vaga.TabIndex = 3;
-            // 
-            // tbt_status
-            // 
-            this.tbt_status.Location = new System.Drawing.Point(651, 174);
-            this.tbt_status.Name = "tbt_status";
-            this.tbt_status.Size = new System.Drawing.Size(175, 22);
-            this.tbt_status.TabIndex = 4;
             // 
             // tbt_placa
             // 
@@ -132,6 +125,7 @@
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
+            this.lv_vagas.FullRowSelect = true;
             this.lv_vagas.HideSelection = false;
             this.lv_vagas.Location = new System.Drawing.Point(947, 87);
             this.lv_vagas.Name = "lv_vagas";
@@ -154,17 +148,28 @@
             // 
             this.columnHeader3.Text = "Status";
             // 
+            // cmb_status
+            // 
+            this.cmb_status.FormattingEnabled = true;
+            this.cmb_status.Items.AddRange(new object[] {
+            "ocupado",
+            "livre"});
+            this.cmb_status.Location = new System.Drawing.Point(651, 174);
+            this.cmb_status.Name = "cmb_status";
+            this.cmb_status.Size = new System.Drawing.Size(175, 24);
+            this.cmb_status.TabIndex = 10;
+            // 
             // Cad_vagas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1269, 710);
+            this.Controls.Add(this.cmb_status);
             this.Controls.Add(this.lv_vagas);
             this.Controls.Add(this.REMOVER3);
             this.Controls.Add(this.EDITAR3);
             this.Controls.Add(this.SALVAR3);
             this.Controls.Add(this.tbt_placa);
-            this.Controls.Add(this.tbt_status);
             this.Controls.Add(this.tbt_vaga);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -183,7 +188,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbt_vaga;
-        private System.Windows.Forms.TextBox tbt_status;
         private System.Windows.Forms.TextBox tbt_placa;
         private System.Windows.Forms.Button SALVAR3;
         private System.Windows.Forms.Button EDITAR3;
@@ -192,5 +196,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ComboBox cmb_status;
     }
 }
