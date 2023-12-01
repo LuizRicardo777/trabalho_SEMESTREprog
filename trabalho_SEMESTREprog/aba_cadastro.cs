@@ -4,10 +4,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+
 
 namespace trabalho_SEMESTREprog
 {
@@ -62,7 +67,7 @@ namespace trabalho_SEMESTREprog
                 clientDAO.SalvarUser(cliente);
 
 
-                MessageBox.Show("cadastrado com suceso",//mensagem na tela
+                MessageBox.Show("cadastrado com sucesso",//mensagem na tela
                     "AVISO",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
@@ -118,7 +123,7 @@ namespace trabalho_SEMESTREprog
                 clientDAO.AtualizarUser(cliente);
 
 
-                MessageBox.Show("editado com sucesso com suceso",//mensagem na tela
+                MessageBox.Show("editado com sucesso com sucesso",//mensagem na tela
                     "AVISO",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
@@ -172,7 +177,7 @@ namespace trabalho_SEMESTREprog
             //atualizar
                 UpdateListView();
 
-            MessageBox.Show("deletado com suceso",//mensagem na tela
+            MessageBox.Show("deletado com sucesso",//mensagem na tela
                 "AVISO",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
@@ -182,5 +187,56 @@ namespace trabalho_SEMESTREprog
         {
 
         }
+
+        private void RELATORIO_Click(object sender, EventArgs e)
+        {
+            //aqui temos o botao de gera o pdf a partir das colunas do nosso banco de dados 
+            // Conexão com o banco de dados SQL Server
+            string stringConnection = @"Data Source="
+                     + Environment.MachineName +
+                     @"\SQLEXPRESS;Initial Catalog=" +
+                     "estacionamento" + ";Integrated Security=true";
+            SqlConnection connection = new SqlConnection(stringConnection);
+            connection.Open();
+
+            // Consulta SQL para recuperar as informações
+            string query = "SELECT Id, Cpf, Carro, Nome FROM cadastro";
+            SqlCommand command = new SqlCommand(query, connection);
+            SqlDataReader reader = command.ExecuteReader();
+
+            // Cria um novo documento PDF
+            Document document = new Document();
+            PdfWriter.GetInstance(document, new FileStream("arquivo.pdf", FileMode.Create));
+            document.Open();
+
+            // Cria uma nova tabela e adiciona as informações recuperadas
+            PdfPTable table = new PdfPTable(4);
+            table.AddCell("Id");
+            table.AddCell("Cpf");
+            table.AddCell("Carro");
+            table.AddCell("Nome");
+
+            while (reader.Read())
+            {
+                table.AddCell(reader["Id"].ToString());
+                table.AddCell(reader["Cpf"].ToString());
+                table.AddCell(reader["Carro"].ToString());
+                table.AddCell(reader["Nome"].ToString());
+            }
+
+            // Adiciona a tabela ao documento
+            document.Add(table);
+
+            // Fecha o documento e a conexão com o banco de dados
+            document.Close();
+            connection.Close();
+
+            MessageBox.Show(
+            "RELATORIO GERADO COM SUCESSO",
+            "ATENÇÃO",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
+        }
     }
-}
+    }
+

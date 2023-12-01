@@ -206,6 +206,7 @@
             this.RELATORIO.TabIndex = 47;
             this.RELATORIO.Text = "GERAR RELATÓRIO";
             this.RELATORIO.UseVisualStyleBackColor = false;
+            this.RELATORIO.Click += new System.EventHandler(this.RELATORIO_Click);
             // 
             // textBox3
             // 

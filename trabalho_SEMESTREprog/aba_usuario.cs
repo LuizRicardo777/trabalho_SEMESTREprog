@@ -51,13 +51,16 @@ namespace trabalho_SEMESTREprog
                     Usuario usuario = new Usuario(tbt_nome.Text,tbt_senha.Text);
 
                     //chamar classe
-                     MessageBox.Show("SISTEMA EM FUNCIONAMENTO!",//mensagem na tela
-                    "BEM VINDO",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
                     UsuarioDAO usuariDAO = new UsuarioDAO();
+
+                    
+                    
                     if (usuariDAO.LoginUser(usuario))
                     {
+                        MessageBox.Show("SISTEMA EM FUNCIONAMENTO!",//mensagem na tela
+                   "BEM VINDO",
+                       MessageBoxButtons.OK,
+                       MessageBoxIcon.Information);
                         Form1 form = new Form1();
                         form.ShowDialog();
                         
@@ -69,7 +72,7 @@ namespace trabalho_SEMESTREprog
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     }
-
+                    
                 }
                 else
                 {
@@ -84,6 +87,7 @@ namespace trabalho_SEMESTREprog
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 }
+                
             }
             catch (Exception error)
             {
